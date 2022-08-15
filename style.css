@@ -1,0 +1,263 @@
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #2b2a2c;
+  background-color: #fff;
+}
+
+.header__wrapper {
+  font-size: 16px;
+}
+
+.header__inner {
+  height: 100vh;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 150px;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.avatar {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: #2b2a2c;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  color: #6a696b;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.menu__nav ul {
+  display: flex;
+  gap: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  align-items: center;
+}
+
+.menu__item {
+  position: relative;
+  padding-bottom: 7px;
+}
+.menu__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: #2b2a2c;
+  bottom: 0;
+  transition: all 0.3s ease-in;
+  font-size: 15px;
+}
+.menu__item:hover::after {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  background-color: #2b2a2c;
+  color: #fff;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-weight: 300;
+  margin-bottom: 25px;
+  font-size: 35px;
+}
+
+.decor {
+  margin-bottom: 30px;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 100px;
+}
+
+.about__btn {
+  text-align: center;
+  display: inline-block;
+  padding: 20px 30px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  color: #6a696b;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+.about__btn:hover {
+  background-color: #2b2a2c;
+  color: #fff;
+}
+
+.header__img img {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  min-width: 300px;
+}
+
+.aboutme__text {
+  max-width: 500px;
+}
+
+.aboutme__title {
+  text-transform: uppercase;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.aboutme__subtitle {
+  font-size: 52px;
+  color: #6a696b;
+  color: rgba(106, 105, 107, 0.4);
+  margin-bottom: 40px;
+}
+
+.aboutme__p {
+  font-size: 15px;
+  color: #6a696b;
+  line-height: 200%;
+  font-weight: 400;
+}
+
+.aboutme__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
+.citat__inner {
+  background: url(img/ismailbg.jpg) no-repeat center center;
+  background-size: cover;
+  display: block;
+  color: #fff;
+  font-style: italic;
+  padding: 100px 0 80px;
+}
+
+.citat__wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.citat__wrapper .title {
+  line-height: 200%;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.citat__wrapper .autor {
+  margin-left: auto;
+  font-size: 15px;
+  text-align: end;
+}
+
+.footer__inner {
+  background-color: #2b2a2c;
+  color: #8d8d8e;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: none;
+}
+
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+@media only screen and (max-width: 800px) {
+  .menu__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+  .menu-btn {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
